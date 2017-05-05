@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Remix the news</title>
+<style type="text/css">
+	:root {
+		--mic-green: #00FFBF;
+	}
+	@font-face {
+		font-family: 'MicSans';
+		src: url('MicSans-Bold.ttf');
+	}
+	body {
+		background-color: #fff;
+		font-family: 'MicSans';
+	}
+	.header__wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 8vh;
+		background-color: #000;
+		/**/
+		font-size: 6vh;
+		color: var(--mic-green);
+	}
+	.content {
+		position: absolute;
+		top: 8vh;
+		left: 0;
+		width: 100vw;
+		height: 92vh;
+		background-color: #fff;
+	}
+	.content__menu {
+		display: block;
+	}
+	.content__topic {
+		display: none;
+	}
+</style>
+</head>
+<body>
+<div class="header__wrapper">
+Mic
+</div>
+<div class="content content__menu">
+</div>
+<div class="content content__topic">
+</div>
+</body>
+</html>
