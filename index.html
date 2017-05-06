@@ -110,15 +110,17 @@
     	cursor: pointer;
 	}
 	.article__body {
+		position: absolute;
+		top: 130px;
+		z-index: -1;
+	}
+	.article__body--text {
 		width: 50vw;
 		font-family: 'Graphik';
 		font-size: 18px;
 		line-height: 30px;
 	}
 	.article__image {
-		position: absolute;
-		top: -20px;
-		z-index: -1;
 		width: 50vw;
 	}
 	.article__body p {
@@ -209,9 +211,11 @@ Mic
 <div id="headline2"><span class="article__headline">GOP's heads so far up asses they came back out the other side</span></div>
 
 </div>
-<img class="article__image" src="https://thumbs.mic.com/M2E2NzA3Mjk1OCMvZGNpRXk4czE1UElyblZ5WVhfdGNPcE94VG5FPS8yNHg4NjoyOTc2eDE1OTAvMTYwMHg5MDAvZmlsdGVyczpmb3JtYXQoanBlZyk6cXVhbGl0eSg4MCkvaHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL3BvbGljeW1pYy1pbWFnZXMvcGozeHR1bzd2N2d1ejM4ZXo1ZmRndzJnaWIwazh5cndmZXA5anNkMjY2MWFkazJhOHJybnlobHpkN3pjZGdlaS5qcGc.jpg">
 
 <div class="article__body">
+<img class="article__image" src="https://thumbs.mic.com/M2E2NzA3Mjk1OCMvZGNpRXk4czE1UElyblZ5WVhfdGNPcE94VG5FPS8yNHg4NjoyOTc2eDE1OTAvMTYwMHg5MDAvZmlsdGVyczpmb3JtYXQoanBlZyk6cXVhbGl0eSg4MCkvaHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL3BvbGljeW1pYy1pbWFnZXMvcGozeHR1bzd2N2d1ejM4ZXo1ZmRndzJnaWIwazh5cndmZXA5anNkMjY2MWFkazJhOHJybnlobHpkN3pjZGdlaS5qcGc.jpg">
+
+<div class="article__body--text">
 <p>
 Republicans passed the American Health Care Act by a razor-thin margin as their hurried health care vote captivated the country. Without public hearings or time to judge how the bill would affect Americans, enough Republican moderates supporter the bill to take the first step toward Donald Trump's promise to "repeal and replace" the Affordable Care Act.
 </p>
@@ -237,6 +241,7 @@ The bill now heads to the Senate, where its fate is very much in question. At le
 </p>
 
 <img src="article__footer.png" class="article__footer">
+</div>
 </div>
 
 
