@@ -81,19 +81,23 @@
 		margin: 0.5vw;
 	}
 	.main__menu--content {
-		margin: 36px auto;
-		width: 70vw;
+		position: absolute;
+		width: 92vw;
+		left: 4vw;
+		top: 40vh;
 	}
 	.main__menu--content h2 {
 		font-size: 24px;
-		margin: 0.5em auto;
+		margin: 0.2em auto;
 		text-decoration: underline;
 	}
 	.main__menu--content p {
-		width: 50vw;
+		width: 28vw;
 		line-height: 44px;
-		margin-left: 28px;
+		margin: 1.2vw;
 		margin-bottom: 10px;
+		display: inline-block;
+		float: left;
 	}
 	.article__container {
 		width: 100vw;
@@ -180,7 +184,7 @@
 		background-color: #000;
 		width: 100vw;
 	}
-	.top__black-bar img {
+	.top__black-bar img.credit {
 		position: absolute;
 		right: 5vw;
 		height: 25vh;
@@ -201,6 +205,25 @@
 		float: right;
 		z-index: 200;
 		background-color: #f3c;
+	}
+	.main__menu--logo-hero {
+		position: absolute;
+		left: 10vw;
+		top: 20vh;
+		width: 35vw;
+		transform: translate(0,-50%);
+	}
+	.main__menu--intro-box {
+		position: absolute;
+		left: 50vw;
+		top: 20vh;
+		border: 1px solid #999;
+		width: 40vw;
+		box-sizing: border-box;
+		padding: 25px;
+		font-family: 'MicSans';
+		font-size: 20px;
+		transform: translate(0,-60%);
 	}
 </style>
 </head>
@@ -225,16 +248,22 @@ Mic
 
 
 <div class="main main__menu">
+<img src="pivot_loop.gif" class="main__menu--logo-hero">
+<div class="main__menu--intro-box">
+Think there’s a better, more impactful or accurate way to headline this article? We want to hear from you! Write the headline you think best serves this content and it could be featured on-page.
+</div>
+
+
 <div class="main__menu--content">
-<h2>Articles:</h2>
-<p><span class="article__headline--small" onclick="goToArticle()">Trump is heading to Jersey instead of New York this weekend because he cares about America</span></p>
+<center><h2>Try it out:</h2></center>
 <p><span class="article__headline--small">Under the GOP's health plan, sexual assault could be considered a pre-existing condition</span></p>
+<p><span class="article__headline--small" onclick="goToArticle()">Trump is heading to Jersey instead of New York this weekend because he cares about America</span></p>
 <p><span class="article__headline--small">Republican Health Care Bill: Thursday's vote may shift 20 GOP districts toward Democrats</span></p>
 </div>
 
 </div>
 <div class="main main__article">
-<div class="top__black-bar"><img src="top__credit.png"></div>
+<div class="top__black-bar"><img src="top__credit.png" class="credit"></div>
 <div class="article__container">
 <div class="headline__container">
 <div id="pivot__button" onclick="pivot()"></div>
