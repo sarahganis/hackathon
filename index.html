@@ -30,15 +30,23 @@
 	}
 	.header__mic-logo {
 		height: 100%;
+		width: 80px;
 		padding: 1vh 2vh;
 		font-family: 'MicSans';
-		border-right: 1px solid #666;
+	}
+	.header__logo-divider {
+		position: fixed;
+		top: 1vh;
+		height: 6vh;
+		width: 1px;
+		background-color: #666;
+		left: 15vh;
 	}
 	.header__pivot-logo {
 		position: fixed;
 		height: 100%;
 		top: 0;
-		left: 120px;
+		left: 17vh;
 	}
 	.header__pivot-logo img {
 		height: 7vh;
@@ -201,6 +209,7 @@
 <div class="header__mic-logo">
 Mic
 </div>
+<div class="header__logo-divider"></div>
 <div class="header__pivot-logo">
 <img src="pivot_static.png">
 </div>
