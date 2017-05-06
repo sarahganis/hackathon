@@ -174,6 +174,14 @@
 		bottom: 8.6vw;
 		right: 3vw;
 		border-radius: 50%;
+		width: 45px;
+		height: 45px;
+		font-family: 'MicSans';
+		font-size: 36px;
+		background-color: var(--mic-green);
+		padding-left: 3px;
+		padding-top: 3px;
+		cursor: pointer;
 	}
 	.top__black-bar {
 		position: absolute;
@@ -303,7 +311,7 @@ Think there’s a better, more impactful or accurate way to headline this articl
 <div class="icon icon__pivot" onclick="pivot()"></div>
 <div class="icon icon__upvote"></div>
 <div class="icon icon__downvote"></div>
-<div class="icon icon__pencil"></div>
+<div class="icon icon__pencil" onclick="userSubmit()"></div>
 </div>
 
 <div id="headline1"><span class="article__headline">Trump is heading to Jersey instead of New York this weekend because he cares about America</span></div>
@@ -353,7 +361,7 @@ If he does decide to take a break from all the working and hit the links, though
 
 
 <div class="back__button" onclick="back()">
-&lt;
+&nbsp;&lt;
 </div>
 
 </div>
@@ -401,6 +409,9 @@ var pivot = function() {
 		headline1.style.display = "block";
 		x = 0;
 	}
+};
+var userSubmit = function() {
+	prompt("Submit your own headline!");
 };
 </script>
 
