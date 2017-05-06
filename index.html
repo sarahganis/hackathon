@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Remix the news</title>
+<title>PIVOT</title>
 <style type="text/css">
 	:root {
 		--mic-green: #00FFBF;
@@ -9,9 +9,13 @@
 		font-family: 'MicSans';
 		src: url('MicSans-Bold.ttf');
 	}
+	@font-face {
+		font-family: 'Graphik';
+		src: url('graphikr.woff');
+	}
 	body {
 		background-color: #fff;
-		font-family: 'MicSans';
+		font-family: 'Graphik';
 	}
 	.header__wrapper {
 		position: fixed;
@@ -24,29 +28,129 @@
 		font-size: 6vh;
 		color: var(--mic-green);
 	}
-	.content {
-		position: absolute;
+	.header__mic-logo {
+		height: 7vh;
+		margin: 1vh 2vh 0;
+		font-family: 'MicSans';
+	}
+	.main {
+		position: fixed;
 		top: 8vh;
 		left: 0;
 		width: 100vw;
 		height: 92vh;
 		background-color: #fff;
+		overflow: auto;
 	}
-	.content__menu {
+	.main__menu {
 		display: block;
 	}
-	.content__topic {
+	.main__topic {
 		display: none;
+	}
+	.img__hero {
+		width: 70vw;
+		margin: 1.5vh 15vw;
+	}
+	.main__menu--content {
+		margin: 36px auto;
+		width: 70vw;
+	}
+	.main__menu--content h2 {
+		font-size: 24px;
+		margin: 0.5em auto;
+		text-decoration: underline;
+	}
+	.headline__container {
+		width: 40vw;
+		margin-left: 36px;
+		line-height: 50px;
+	}
+	.article__headline {
+		background-color: #00ffbf;
+    	box-shadow: 8px 1px 0 3px var(--mic-green), -8px 1px 0 3px var(--mic-green);
+    	color: #000;
+    	font-size: 32px;
+    	font-family: 'MicSans';
+	}
+	.article__headline--small {
+		background-color: #00ffbf;
+    	box-shadow: 8px 1px 0 3px var(--mic-green), -8px 1px 0 3px var(--mic-green);
+    	color: #000;
+    	font-size: 28px;
+    	font-family: 'MicSans';
+    	margin: 0.5em 0;
+    	text-decoration: none;
+    	margin-left: 28px;
+	}
+	.article__body {
+		width: 50vw;
+		font-family: 'Graphik';
+		font-size: 18px;
+		line-height: 30px;
+	}
+	.article__body p {
+		padding-bottom: 5px;
+	}
+	.main__menu--footer {
+		position: fixed;
+		bottom: 0;
+		width: 100vw;
+		background-color: #000;
 	}
 </style>
 </head>
 <body>
 <div class="header__wrapper">
+<div class="header__mic-logo">
 Mic
 </div>
-<div class="content content__menu">
 </div>
-<div class="content content__topic">
+<div class="main main__menu">
+<div class="main__menu--content">
+<h2>Articles:</h2>
+<p><a class="article__headline--small" href="#first">First article headline</a></p>
+<p><a class="article__headline--small" href="">Second article headline</a></p>
+</div>
+<div class="main__menu--footer">
+<img class="img__hero" src="channels.png">
+</div>
+</div>
+<div class="main main__topic">
+<div class="headline__container">
+<span class="article__headline">This is a headline with lots of text and color and stuff</span>
+</div>
+<div class="article__body">
+<p>
+Paul Renner began sketching his letters that would become Futura in 1924; the typeface was available for use three years later.[7] The family was originally cast in Light, Medium, Bold, and Bold Oblique fonts in 1928. Light Oblique, Medium Oblique, Demibold, and Demibold Oblique fonts were later released in 1930. Book font was released in 1932. Book Oblique font was released in 1939. Extra Bold font was designed by Edwin W. Shaar in 1952. Extra Bold Italic font was designed in 1955 by Edwin W. Shaar and Tommy Thompson. Matrices for machine composition were made by Intertype.
+</p>
+
+<p>
+Despite its clean geometric appearance, some of Futura's design choices recalled classic serif typefaces. Unlike many sans-serif designs intended for display purposes, Futura has quite a low x-height, reducing its stridency and increasing its suitability for body text.[b] The original Futura design concept included small capitals and old-style figures. These were dropped from the original metal issue of the type and first offered digitally by Neufville Digital under the Futura ND family;[citation needed] small caps are also available in the URW++ digitisation.
+</p>
+
+<p>
+The design of Futura avoids the decorative, eliminating nonessential elements, but makes subtle departures from pure geometric designs that allow the letterforms to seem balanced.[9] This is visible in the apparently almost perfectly round stroke of the o, which is nonetheless slightly ovoid, and in how the circular strokes of letters like b gently thin as they merge with the verticals.
+</p>
+
+<p>
+Renner's original plan was for two versions: a more conventional version suitable for general use, and a more eccentric, geometric lower case based on the circle and triangle.[10] This plan was scrapped, although the characters did appear on an early specimen and more recently on at least one digitisation.[11]
+</p>
+
+<p>
+Futura was immediately very successful, due to its combination of classicism and modernity. It spawned a range of derivative geometric sans-serif typefaces from competing foundries, particularly in the United States.
+</p>
+
+<p>
+In the UK Futura, while sometimes used, was overshadowed by Gill Sans, which became popular for similar reasons in the UK and came to define 1930s and 40s printing. While more humanist, it also has geometric leanings which are particularly visible in the capitals.
+</p>
+</div>
+
 </div>
 </body>
+<script type="text/javascript">
+
+</script>
+
+
 </html>
