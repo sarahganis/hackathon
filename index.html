@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>PIVOT</title>
+<link rel="icon" type="image/png" href="https://cdn.mic.com/images/favicons/favicon-32x32-ec2d29e446.png" sizes="32x32">
 <style type="text/css">
 	:root {
 		--mic-green: #00FFBF;
@@ -24,7 +25,6 @@
 		width: 100vw;
 		height: 8vh;
 		background-color: #000;
-		/**/
 		font-size: 6vh;
 		color: var(--mic-green);
 	}
@@ -32,6 +32,14 @@
 		height: 7vh;
 		margin: 1vh 2vh 0;
 		font-family: 'MicSans';
+	}
+	.header__social {
+		position: fixed;
+		right: 0;
+		top: 0;
+	}
+	.header__social img {
+		height: 8vh;
 	}
 	.main {
 		position: fixed;
@@ -41,16 +49,17 @@
 		height: 92vh;
 		background-color: #fff;
 		overflow: auto;
+		transition: all 250ms linear;
 	}
 	.main__menu {
 		display: block;
 	}
-	.main__topic {
+	.main__article {
 		display: none;
 	}
-	.img__hero {
-		width: 70vw;
-		margin: 1.5vh 15vw;
+	.channels {
+		width: 99vw;
+		margin: 0.5vw;
 	}
 	.main__menu--content {
 		margin: 36px auto;
@@ -61,8 +70,13 @@
 		margin: 0.5em auto;
 		text-decoration: underline;
 	}
+	.article__container {
+		width: 100vw;
+		box-sizing: border-box;
+		padding: 3vh 3vw 15vh;
+	}
 	.headline__container {
-		width: 40vw;
+		width: 50vw;
 		margin-left: 36px;
 		line-height: 50px;
 	}
@@ -70,7 +84,7 @@
 		background-color: #00ffbf;
     	box-shadow: 8px 1px 0 3px var(--mic-green), -8px 1px 0 3px var(--mic-green);
     	color: #000;
-    	font-size: 32px;
+    	font-size: 36px;
     	font-family: 'MicSans';
 	}
 	.article__headline--small {
@@ -82,9 +96,10 @@
     	margin: 0.5em 0;
     	text-decoration: none;
     	margin-left: 28px;
+    	cursor: pointer;
 	}
 	.article__body {
-		width: 50vw;
+		width: 60vw;
 		font-family: 'Graphik';
 		font-size: 18px;
 		line-height: 30px;
@@ -95,8 +110,15 @@
 	.main__menu--footer {
 		position: fixed;
 		bottom: 0;
+		left: 0;
 		width: 100vw;
 		background-color: #000;
+		z-index: 100;
+	}
+	.back__button {
+		position: fixed;
+		bottom: 8.6vw;
+		right: 3vw;
 	}
 </style>
 </head>
@@ -105,18 +127,27 @@
 <div class="header__mic-logo">
 Mic
 </div>
+<div class="header__social">
+<img src="social.png">
 </div>
+</div>
+
+<div class="main__menu--footer">
+<img class="channels" src="channels2.png">
+</div>
+
+
+
 <div class="main main__menu">
 <div class="main__menu--content">
 <h2>Articles:</h2>
-<p><a class="article__headline--small" href="#first">First article headline</a></p>
-<p><a class="article__headline--small" href="">Second article headline</a></p>
+<p><span class="article__headline--small" onclick="goToArticle()">First article headline</span></p>
+<p><span class="article__headline--small" href="">Second article headline</span></p>
 </div>
-<div class="main__menu--footer">
-<img class="img__hero" src="channels.png">
+
 </div>
-</div>
-<div class="main main__topic">
+<div class="main main__article">
+<div class="article__container">
 <div class="headline__container">
 <span class="article__headline">This is a headline with lots of text and color and stuff</span>
 </div>
@@ -145,11 +176,23 @@ Futura was immediately very successful, due to its combination of classicism and
 In the UK Futura, while sometimes used, was overshadowed by Gill Sans, which became popular for similar reasons in the UK and came to define 1930s and 40s printing. While more humanist, it also has geometric leanings which are particularly visible in the capitals.
 </p>
 </div>
-
+<div class="back__button">
+<span class="article__headline--small" onclick="back()">&lt;</span>
+</div>
+</div>
 </div>
 </body>
 <script type="text/javascript">
-
+const menu = document.querySelector('.main__menu');
+const article = document.querySelector('.main__article');
+var goToArticle = function() {
+	menu.style.display = "none";
+	article.style.display = "block";
+};
+var back = function() {
+	menu.style.display = "block";
+	article.style.display = "none";
+}
 </script>
 
 
