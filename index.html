@@ -29,9 +29,28 @@
 		color: var(--mic-green);
 	}
 	.header__mic-logo {
-		height: 7vh;
-		margin: 1vh 2vh 0;
+		height: 100%;
+		width: 80px;
+		padding: 1vh 2vh;
 		font-family: 'MicSans';
+	}
+	.header__logo-divider {
+		position: fixed;
+		top: 1vh;
+		height: 6vh;
+		width: 1px;
+		background-color: #666;
+		left: 15vh;
+	}
+	.header__pivot-logo {
+		position: fixed;
+		height: 100%;
+		top: 0;
+		left: 17vh;
+	}
+	.header__pivot-logo img {
+		height: 7vh;
+		padding-top: 1vh;
 	}
 	.header__social {
 		position: fixed;
@@ -189,6 +208,10 @@
 <div class="header__wrapper">
 <div class="header__mic-logo">
 Mic
+</div>
+<div class="header__logo-divider"></div>
+<div class="header__pivot-logo">
+<img src="pivot_static.png">
 </div>
 <div class="header__social">
 <img src="social.png">
